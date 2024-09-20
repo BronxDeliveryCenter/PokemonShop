@@ -24,4 +24,10 @@ public class Users {
     private String credit_card_info;
     private String shipping_address;
     private String password;
+
+    public Users(String username, String password){
+        this.username = username;
+        this.password = password;
+    }
+
 }
