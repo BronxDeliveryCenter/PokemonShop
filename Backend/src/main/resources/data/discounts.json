@@ -1,0 +1,57 @@
+[
+    {
+      "id": 1,
+      "discountCode": "Off",
+      "discount_amount": 10,
+      "createdAt": "09/20/2024",
+      "updated_at": "09/20/2024",
+      "notes": "Introductory discount",
+      "gift": "No"
+    },
+    {
+      "id": 2,
+      "discountCode": "Off",
+      "discount_amount": 20,
+      "createdAt": "09/20/2024",
+      "updated_at": "09/20/2024",
+      "notes": "Use once",
+      "gift": "No"
+    },
+    {
+      "id": 3,
+      "discountCode": "Free item",
+      "discount_amount": 100,
+      "createdAt": "09/20/2024",
+      "updated_at": "09/20/2024",
+      "notes": "Use once",
+      "gift": "No"
+    },
+    {
+      "id": 4,
+      "discountCode": "Off",
+      "discount_amount": 15,
+      "createdAt": "09/20/2024",
+      "updated_at": "09/20/2024",
+      "notes": "Use once",
+      "gift": "No"
+    },
+    {
+      "id": 5,
+      "discountCode": "Bogo",
+      "discount_amount": 100,
+      "createdAt": "09/20/2024",
+      "updated_at": "09/20/2024",
+      "notes": "Use once",
+      "gift": "No"
+    },
+    {
+      "id": 6,
+      "discountCode": "Sale",
+      "discount_amount": 25,
+      "createdAt": "09/20/2024",
+      "updated_at": "09/20/2024",
+      "notes": "Use once",
+      "gift": "No"
+    }
+  ]
+  

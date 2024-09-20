@@ -36,6 +36,7 @@ public class DatabaseCleanUp {
             try(Connection connection = dataSource.getConnection()){
                 Statement statement = connection.createStatement();
                 statement.executeUpdate("DROP TABLE IF EXISTS details");
+                statement.executeUpdate("DROP TABLE IF EXISTS discounts");
                 logger.info("Table dropped successfully");
             } catch (SQLException e) {
                 throw new RuntimeException(e);

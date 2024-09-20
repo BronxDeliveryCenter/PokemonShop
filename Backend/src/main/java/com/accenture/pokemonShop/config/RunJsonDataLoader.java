@@ -3,6 +3,8 @@ package com.accenture.pokemonShop.config;
 
 import com.accenture.pokemonShop.common.OrderDetailsBasicInfoRepo;
 import com.accenture.pokemonShop.model.OrderDetailsBasicInfo;
+import com.accenture.pokemonShop.model.Discounts;
+import com.accenture.pokemonShop.common.DiscountsRepository;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.boot.CommandLineRunner;
@@ -20,10 +22,12 @@ public class RunJsonDataLoader implements CommandLineRunner {
 
     private final Logger logger = LoggerFactory.getLogger(RunJsonDataLoader.class);
     private final OrderDetailsBasicInfoRepo orderDetailsBasicInfoRepo;
+    private final DiscountsRepository discountsRepository;
     final ObjectMapper objectMapper;
 
-    public RunJsonDataLoader(OrderDetailsBasicInfoRepo orderDetailsBasicInfoRepo, ObjectMapper objectMapper){
+    public RunJsonDataLoader(OrderDetailsBasicInfoRepo orderDetailsBasicInfoRepo, DiscountsRepository discountsRepository, ObjectMapper objectMapper){
         this.orderDetailsBasicInfoRepo = orderDetailsBasicInfoRepo;
+        this.discountsRepository = discountsRepository;
         this.objectMapper = objectMapper;
     }
 
@@ -37,10 +41,24 @@ public class RunJsonDataLoader implements CommandLineRunner {
                     orderDetailsBasicInfoRepo.saveAll(orderDetailsBasicInfos);
 
             }catch (IOException e){
-                throw new RuntimeException("Unable to load data from JSON file", e);
+                throw new RuntimeException(" order details Unable to load data from JSON file", e);
             }
         } else {
             logger.info("Data already loaded");
         }
+
+        if(discountsRepository.count() == 0){
+            try(InputStream inputStream = getClass().getResourceAsStream("/data/basicOrderInfo.json")){
+                List<Discounts> discounts = objectMapper.readValue(inputStream, new TypeReference<List<Discounts>>() {});
+                logger.info("discount loaded from JSON file: {}", discounts);
+                discountsRepository.saveAll(discounts);
+
+            }catch (IOException e){
+                throw new RuntimeException(" order details Unable to load data from JSON file", e);
+            }
+        } else {
+            logger.info("Data already loaded");
+        }
+
     }
 }
