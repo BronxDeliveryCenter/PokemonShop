@@ -1,5 +1,5 @@
 import { FaSearch } from "react-icons/fa";
-import Carousel from "./Carousel";
+// import Carousel from "./Carousel";
 import { useEffect } from "react";
 
 const Products = () =>{
@@ -40,7 +40,7 @@ const Products = () =>{
     <div  className="text-left flex flex-col">
         <div>
         <h1 className='text-red font-bold'>Singles</h1>
-        <Carousel/>
+        {/* <Carousel/> */}
         </div>
 
         <div >
