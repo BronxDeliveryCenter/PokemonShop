@@ -2,14 +2,16 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx}"
   ],
   theme: {
     colors: {
-      'red': '#FA0E0E'
+      // Configure your color palette here
+      red: '#FA0E0E'
+      pink: '#fecaca'
     },
+    extend: {},
   },
   plugins: [],
 }
-
 
