@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 
-const Carousel = () => {
+const CarouselForProducts = () => {
   const maxScrollWidth = useRef(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cards, setCards] = useState(0);
