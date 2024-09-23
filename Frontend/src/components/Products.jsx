@@ -37,7 +37,7 @@ const Products = () =>{
     <div  className="text-left flex flex-col">
         <div>
         <h1 className='text-red font-bold'>Singles</h1>
-        <Carousel/>
+        <CarouselForProducts/>
         </div>
 
         <div >
