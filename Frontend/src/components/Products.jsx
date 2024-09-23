@@ -3,9 +3,6 @@ import Carousel from "./Carousel";
 import { useEffect } from "react";
 
 const Products = () =>{
-
-
-
     return (
         <>
         <div className="flex flex-col" >
