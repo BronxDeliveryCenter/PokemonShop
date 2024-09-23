@@ -1,3 +1,4 @@
+export default Carousel;
 import React, { useState } from 'react';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 

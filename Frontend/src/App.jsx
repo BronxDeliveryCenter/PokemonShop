@@ -1,3 +1,6 @@
+import { useState } from 'react'
+import Products from "./components/Products"
+import background from "./assets/background.png"
 import SignUp from "./components/Signup"
 import Admin from "./components/Admin"
 import Home from "./componenta/Home.jsx"
@@ -10,6 +13,7 @@ function App() {
       <SignUp/>
       <Home />
       <Admin/>
+      <Products/>
     </>
   )
 }
